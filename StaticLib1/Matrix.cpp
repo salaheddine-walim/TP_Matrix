@@ -45,8 +45,7 @@ void Matrix::remplir()
 	
 	for (int i = 0; i < this->rows; i++) {
 		for (int j = 0; j < this->cols; j++) {
-			file >> number;
-			this->matrix[i][j] = number;
+			this->matrix[i][j] = file >> number ? number : 0.0;
 		}
 	}
 
