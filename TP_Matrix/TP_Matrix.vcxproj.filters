@@ -19,4 +19,7 @@
       <Filter>Fichiers sources</Filter>
     </ClCompile>
   </ItemGroup>
+  <ItemGroup>
+    <Text Include="Numbers.txt" />
+  </ItemGroup>
 </Project>

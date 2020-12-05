@@ -7,7 +7,7 @@
 
 int main()
 {
-    Matrix m(2, 2);
+    Matrix m(3, 3);
     m.remplir();
     m.print();
 }

@@ -1,4 +1,5 @@
 #pragma once
+
 class Matrix
 {
 public :
@@ -6,7 +7,7 @@ public :
 	Matrix(int, int);
 	Matrix& operator+(const Matrix&);
 	Matrix& operator*(const Matrix&);
-	void remplir();
+	void remplir( );
 	void print();
 	
 private:

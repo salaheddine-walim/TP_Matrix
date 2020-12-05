@@ -1,6 +1,7 @@
 #include "pch.h"
 #include "Matrix.h"
 #include <iostream>
+#include <fstream>
 
 using namespace std;
 
@@ -34,11 +35,26 @@ Matrix& Matrix::operator*(const Matrix&)
 
 void Matrix::remplir()
 {
-	for (int i = 0; i < this->rows; i++) {
-		for (int j = 0; j < this->cols; j++) {
-			this->matrix[i][j] = 0.0;
+	//Remplir a partir d'un fichier.txt
+	std::string filename;
+	filename = "C:/Users/willi/Desktop/EMSI/3 eme annee/programmation orientee objet/tp c++/TP_Matrix/TP_Matrix/Numbers.txt";
+	std::ifstream file;
+	file.open(filename);
+	float number;
+	int i = 0;
+	
+	for (int i = 0; i < 3; i++) {
+		for (int j = 0; j < 3; j++) {
+			file >> number;
+			this->matrix[i][j] = number;
 		}
 	}
+
+	//for (int i = 0; i < this->rows; i++) {
+	//	for (int j = 0; j < this->cols; j++) {
+	//		this->matrix[i][j] = 0.0;
+	//	}
+	//}
 }
 
 void Matrix::print()
