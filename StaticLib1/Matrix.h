@@ -3,7 +3,7 @@
 class Matrix
 {
 public :
-	float** matrix;
+	
 	Matrix(int, int);
 	Matrix& operator+(const Matrix&);
 	Matrix& operator*(const Matrix&);
@@ -11,6 +11,7 @@ public :
 	void print();
 	
 private:
+	float** matrix;
 	int rows;
 	int cols;
 };
