@@ -9,11 +9,10 @@ Matrix::Matrix(int r, int c)
 {
 	this->rows = r;
 	this-> cols = c;
-	for (int i = 0; i < this->rows; i++) {
-		this->matrix = new float*[this->rows];
-		for (int j = 0; j < this->cols; j++) {
-			this->matrix[i] = new float[this->cols];
-		}
+
+	this->matrix = new float* [this->rows];
+	for (int j = 0; j < this->cols; j++) {
+		this->matrix[j] = new float[this->cols];
 	}
 }
 
